@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sukriti Talwar | AI/ML Builder</title>
+  <meta name="description" content="Sukriti Talwar: DTU CSE '28, SIH '25 Grand Finalist, building with AI/ML, GenAI, Agentic AI and Computer Vision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Nunito:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath fill='%237aa2f7' d='M1 0h2v1H1zM4 0h2v1H4zM0 1h7v2H0zM1 3h5v1H1zM2 4h3v1H2zM3 5h1v1H3z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ============ BOOT ============ -->
+<div id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <pre id="boot-log"></pre>
+    <h1 id="boot-name">SUKRITI TALWAR</h1>
+  </div>
+  <button class="boot-skip" type="button">skip ›</button>
+</div>
+
+<canvas id="field" aria-hidden="true"></canvas>
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============ LIFELINE (scroll progress) ============ -->
+<div class="lifeline" role="progressbar" aria-label="Page progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <span class="life-label">LIFE</span>
+  <div class="life-track">
+    <div class="life-fill"></div>
+    <span class="px life-heart" data-sprite="heart" data-size="3"></span>
+  </div>
+  <span class="life-pct">0%</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#home" class="brand"><span class="px" data-sprite="heart" data-size="3"></span> <span>sukriti<span class="dim">.talwar</span></span></a>
+  <nav>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="status"><span class="dot"></span> Currently building with AI + GenAI + Agentic Systems</p>
+      <h1 class="hero-title">Hi, I'm <span class="grad">Sukriti Talwar.</span></h1>
+      <p class="hero-sub mono">AI/ML <i>•</i> GenAI <i>•</i> Agentic AI <i>•</i> Computer Vision</p>
+      <p class="hero-text">Computer Engineering student at DTU, building intelligent systems, experimenting with AI, and turning ambitious ideas into working products.</p>
+      <ul class="creds" aria-label="Highlights">
+        <li>Ex-AIML Intern @ IAIP</li>
+        <li>SIH '25 Grand Finalist</li>
+        <li>Amazon MLSS '26</li>
+        <li>Media Head @ AIMS DTU</li>
+        <li>McKinsey Forward '25</li>
+        <li>4× Hackathon Winner</li>
+        <li>4× Case Comp Winner</li>
+        <li>DTU CSE '28</li>
+      </ul>
+      <div class="btn-row">
+        <a href="#projects" class="btn btn-primary">View my work <span aria-hidden="true">→</span></a>
+        <a href="#" class="btn btn-ghost" data-link="github" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" class="btn btn-ghost" data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="hero-art has-photo">
+      <figure class="portrait">
+        <span class="ring r1" aria-hidden="true"></span>
+        <span class="ring r2" aria-hidden="true"></span>
+        <div class="portrait-frame">
+          <img src="assets/sukriti.jpg" alt="Sukriti Talwar smiling and giving a thumbs up" onerror="this.closest('.hero-art').classList.remove('has-photo')" />
+        </div>
+        <figcaption class="portrait-tag mono"><span class="dot"></span> sukriti@dtu · online</figcaption>
+      </figure>
+      <svg class="builder" viewBox="0 0 520 500" xmlns="http://www.w3.org/2000/svg" aria-label="Illustration of a young engineer coding on a laptop">
+        <defs>
+          <radialGradient id="halo" cx="50%" cy="52%" r="50%"><stop offset="0" stop-color="#cfe0ff" stop-opacity=".95"/><stop offset=".65" stop-color="#e4eeff" stop-opacity=".6"/><stop offset="1" stop-color="#eef4ff" stop-opacity="0"/></radialGradient>
+          <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9c4f7"/><stop offset="1" stop-color="#7c9fe8"/></linearGradient>
+          <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3f63"/><stop offset=".5" stop-color="#23263f"/><stop offset="1" stop-color="#1a1c30"/></linearGradient>
+          <linearGradient id="lid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe9ff"/></linearGradient>
+          <radialGradient id="screenglow" cx="50%" cy="100%" r="70%"><stop offset="0" stop-color="#9fd8ff" stop-opacity=".75"/><stop offset="1" stop-color="#9fd8ff" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="260" cy="260" r="235" fill="url(#halo)"/>
+        <circle cx="260" cy="260" r="200" fill="none" stroke="#9db8f0" stroke-opacity=".6" stroke-dasharray="2 8"/>
+        <path d="M197 205 C188 138 332 138 323 205 C328 262 338 312 318 338 L202 338 C182 312 192 262 197 205 Z" fill="url(#hair)"/>
+        <path d="M140 430 C140 350 185 312 260 306 C335 312 380 350 380 430 Z" fill="url(#hoodie)"/>
+        <path d="M244 258 h32 v42 c-8 10 -24 10 -32 0 Z" fill="#dcae95"/>
+        <ellipse cx="260" cy="218" rx="44" ry="51" fill="#efc2a8"/>
+        <path d="M214 222 C203 160 240 146 262 147 C298 148 320 172 307 224 C302 196 288 180 268 176 C262 190 238 196 214 222 Z" fill="url(#hair)"/>
+        <path d="M236 224 q8 6 16 0 M268 224 q8 6 16 0" stroke="#2a2d48" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M253 247 q7 5 14 0" stroke="#a05560" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M204 206 C200 128 320 128 316 206" stroke="#5b82e0" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <rect x="193" y="196" width="20" height="40" rx="9" fill="#5b82e0"/><rect x="307" y="196" width="20" height="40" rx="9" fill="#5b82e0"/>
+        <ellipse cx="260" cy="318" rx="150" ry="70" fill="url(#screenglow)" class="glow-pulse"/>
+        <rect x="168" y="318" width="184" height="104" rx="9" fill="url(#lid)" stroke="#9db8f0" stroke-width="1.5"/>
+        <rect x="140" y="420" width="240" height="10" rx="4" fill="#b9cff5"/>
+        <rect x="30" y="430" width="460" height="4" rx="2" fill="#9db8f0"/>
+      </svg>
+
+      <span class="px float f1" data-sprite="computer" data-size="4" style="left:-2%;top:62%"></span>
+      <span class="px float f2" data-sprite="coffee" data-size="3" style="right:4%;top:72%"></span>
+      <span class="px float f3" data-sprite="cursor" data-size="3" style="left:62%;top:40%"></span>
+      <span class="px float f1" data-sprite="heart" data-size="3" style="left:14%;top:14%"></span>
+
+      <code class="chip-code c1">agent.plan(goal)</code>
+      <code class="chip-code c2">torch.compile(model)</code>
+      <code class="chip-code c3">&lt;ship it/&gt;</code>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll to About"><span></span></a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="wrap">
+    <p class="eyebrow"><span class="px" data-sprite="heart" data-size="2"></span> about</p>
+    <h2 class="h2 reveal">BUILT, NOT JUST LEARNED.</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a Computer Engineering student at Delhi Technological University with a strong interest in Artificial Intelligence, Machine Learning, Generative AI, Agentic AI and Computer Vision.</p>
+        <p>I enjoy learning by building, whether that's training a model, designing an AI workflow, creating a prototype overnight at a hackathon, or figuring out why something refuses to work at 2 AM.</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat">
+          <span class="stat-big">DTU</span>
+          <span class="stat-label">B.Tech Computer Science &amp; Engineering</span>
+          <span class="stat-meta mono">2024–2028</span>
+        </div>
+        <div class="stat">
+          <span class="stat-big">9.279</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat stat-wide">
+          <span class="stat-label">Focus</span>
+          <div class="focus-tags"><span>AI/ML</span><span>GenAI</span><span>Agentic AI</span><span>Computer Vision</span></div>
+        </div>
+        <span class="px about-heart" data-sprite="heart" data-size="5"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <p class="eyebrow"><span class="px" data-sprite="floppy" data-size="2"></span> experience</p>
+    <h2 class="h2 reveal">REAL SYSTEMS. REAL CONSTRAINTS.</h2>
+    <article class="exp reveal">
+      <div class="term">
+        <div class="term-bar"><i></i><i></i><i></i><span class="mono">iaip_internship.log</span></div>
+        <pre class="term-body mono" id="exp-term"></pre>
+      </div>
+      <div class="exp-copy">
+        <p class="exp-org">Indian Army · Directorate General of Information Systems</p>
+        <p class="exp-role mono">AI/ML Intern · MISO, IAIP · Jun to Aug 2025</p>
+        <p>An early hands-on experience working in a real-world technology environment, where I gained exposure to systems, data, debugging and problem-solving in a mission-oriented setting.</p>
+        <div class="exp-proj">
+          <h5 class="mono">project · SAMPURNA</h5>
+          <p>A multimodal AI pipeline for defence applications, unifying image segmentation (OpenCV), speech processing and structured-data fusion. Automated PyTorch feature extraction cut preprocessing effort by <b>70%</b> across <b>3 modalities</b>.</p>
+        </div>
+        <div class="tags"><span>PyTorch</span><span>OpenCV</span><span>multimodal AI</span><span>air-gapped setup</span><span>debugging</span><span>working with officers</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <p class="eyebrow"><span class="px" data-sprite="terminal" data-size="2"></span> projects</p>
+    <h2 class="h2 reveal">THINGS I'VE BUILT</h2>
+
+    <!-- SPEAKEZ -->
+    <article class="proj proj-feature reveal">
+      <div class="proj-head split">
+        <div>
+          <span class="proj-num mono">P/01</span>
+          <h3>SpeakEZ</h3>
+          <p class="proj-tag">AI Speech Coach for Stammering &amp; Speech Disorders. A real-time, multi-agent coaching platform.</p>
+        </div>
+        <div class="proj-links">
+          <a class="btn btn-ghost sm" href="https://www.youtube.com/playlist?list=PLhwUfFiBwD2zNuZbZsOxQyLT9ZsnZaTLB" target="_blank" rel="noopener">▶ Demo playlist</a>
+        </div>
+      </div>
+
+      <div class="kpis four">
+        <div><b>10</b><span>agents</span></div>
+        <div><b>&lt;200<small>ms</small></b><span>end-to-end latency</span></div>
+        <div><b>6+</b><span>speech dimensions</span></div>
+        <div><b>+40%</b><span>pilot scores</span></div>
+      </div>
+
+      <div class="flow" aria-label="SpeakEZ agent workflow">
+        <p class="flow-title mono">agent workflow</p>
+        <div class="lane">
+          <div class="node n-in">User Input</div>
+          <div class="edge"><span>raw audio + video</span></div>
+          <div class="node"><em>Agent 1</em>Input Capture</div>
+          <div class="edge"><span>frames + timestamps</span></div>
+          <div class="node"><em>Agent 1.5</em>Audio Buffer</div>
+        </div>
+        <div class="lane-turn mono">audio_url + video frames ↓</div>
+        <div class="lane">
+          <div class="group">
+            <div class="node n-par"><em>Agent 2</em>Speech Features</div>
+            <div class="node n-par"><em>Agent 3</em>NLP Intelligence</div>
+            <div class="node n-par"><em>Agent 4</em>Visual Presence</div>
+          </div>
+          <div class="edge"><span>voice · language · vision metrics</span></div>
+          <div class="node n-core"><em>Agent 5</em>Confidence Engine</div>
+          <div class="edge"><span>confidence score</span></div>
+          <div class="node"><em>Agent 6</em>Purpose Alignment</div>
+        </div>
+        <div class="lane-turn mono">tone alignment ↓</div>
+        <div class="lane">
+          <div class="node"><em>Agent 7</em>Scenario Simulation</div>
+          <div class="edge"><span>pressure event</span></div>
+          <div class="node"><em>Agent 8</em>Micro Training</div>
+          <div class="edge"><span>training feedback</span></div>
+          <div class="node"><em>Agent 9</em>Progress Tracker</div>
+          <div class="edge"><span>progress insights</span></div>
+          <div class="node n-out">Frontend Dashboard</div>
+        </div>
+      </div>
+
+      <div class="proj-body two">
+        <div class="feat-groups">
+          <div><h5 class="mono">voice</h5><div class="tags"><span>speech evaluation</span><span>stress</span><span>repetition</span><span>stuttering</span><span>pitch</span><span>volume</span><span>pace</span><span>filler words</span></div></div>
+          <div><h5 class="mono">body language</h5><div class="tags"><span>posture</span><span>eye contact</span><span>gestures</span></div></div>
+          <div><h5 class="mono">coaching</h5><div class="tags"><span>confidence score</span><span>purpose-based speech modes</span><span>real-world speech simulations</span></div></div>
+          <div><h5 class="mono">under the hood</h5><div class="tags"><span>MFCC</span><span>CNN / LSTM</span><span>NLP</span><span>multimodal AI</span><span>3+ custom tools</span><span>2+ API integrations</span></div></div>
+          <p class="note">A practice and coaching tool, not a medical or diagnostic product.</p>
+        </div>
+        <div class="video">
+          <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLhwUfFiBwD2zNuZbZsOxQyLT9ZsnZaTLB" title="SpeakEZ demo playlist" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </article>
+
+    <!-- GESA -->
+    <article class="proj reveal">
+      <div class="proj-head">
+        <span class="proj-num mono">P/02</span>
+        <h3>GESA Engine <small class="h-sub">Graph Enhanced Semantic Allocation</small></h3>
+        <p class="proj-tag">Fairness-aware AI allocation engine that matches candidates to opportunities without baking in bias.</p>
+      </div>
+      <div class="proj-body two">
+        <button class="zoom" type="button" data-full="assets/gesa-engine.png" aria-label="Open GESA Engine architecture diagram">
+          <img src="assets/gesa-engine.png" alt="GESA Engine flow: candidate and job data, VAE synthetic data, fine-tuned IntBERT, self-supervised NexusGNN, fairness constraint, NSGA-II optimisation, policy check, admin review, final shortlist" loading="lazy" />
+          <span class="zoom-hint mono">click to enlarge</span>
+        </button>
+        <div>
+          <div class="kpis two-col">
+            <div><b>94.5%</b><span>top-3 accuracy</span></div>
+            <div><b>0.98</b><span>fairness score</span></div>
+            <div><b>+37%</b><span>diversity vs. baseline</span></div>
+            <div><b>20k+</b><span>profiles · 3k+ roles</span></div>
+          </div>
+          <div class="tags"><span>VAE</span><span>IntBERT</span><span>NexusGNN</span><span>NSGA-II</span><span>Hugging Face</span><span>fairness constraints</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ISRO SURFACE ELEVATION -->
+    <article class="proj reveal">
+      <div class="proj-head split">
+        <div>
+          <span class="proj-num mono">P/03</span>
+          <h3>Surface Elevation Modelling <small class="h-sub">ISRO Bharatiya Antariksh Hackathon 2025</small></h3>
+          <p class="proj-tag">Digital Elevation Models of the lunar surface from ISRO satellite imagery, using photoclinometry (Shape-from-Shading) with Lambertian and Hapke reflectance models, plus a detection pipeline for landslides, boulders and craters.</p>
+        </div>
+        <div class="proj-links">
+          <a class="btn btn-ghost sm" href="https://github.com/feedforwardx/SurfaceElevationModelling" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="proj-body two">
+        <button class="zoom" type="button" data-full="assets/isro-dem.webp" aria-label="Open DEM results">
+          <img src="assets/isro-dem.webp" alt="Original lunar image, estimated absolute DEM, relative DEM and 3D map" loading="lazy" />
+          <span class="zoom-hint mono">click to enlarge</span>
+        </button>
+        <div>
+          <button class="zoom" type="button" data-full="assets/isro-flow.webp" aria-label="Open process flow diagram">
+            <img src="assets/isro-flow.webp" alt="Process flow: OHRC/TMC input, landslide detection with multi-temporal ViT and optical flow + GNN, boulder and crater detection with YOLOv8 and SFS data, mineral classification with Chandrayaan-1 HySI" loading="lazy" />
+            <span class="zoom-hint mono">process flow · click to enlarge</span>
+          </button>
+          <div class="tags"><span>Shape-from-Shading</span><span>Hapke reflectance</span><span>CLAHE</span><span>Stable Diffusion</span><span>YOLOv8</span><span>ViT + GNN</span><span>Chandrayaan OHRC/TMC</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PAG-CRAFT -->
+    <article class="proj reveal">
+      <div class="proj-head">
+        <span class="proj-num mono">P/04</span>
+        <h3>PAG-CRAFT <small class="h-sub">Optical-Guided Thermal Super-Resolution</small></h3>
+        <p class="proj-tag">Physics-aware super-resolution for low-resolution thermal IR, using optical-thermal cross-attention, dual RSTB/RCAN encoders, and gated fusion.</p>
+      </div>
+      <ol class="pipe pipe-h">
+        <li>Optical imagery</li><li>Feature extraction</li><li>Cross-spectral alignment</li><li>Mutual information</li><li>Thermal guidance</li><li>Super-resolution</li><li class="out">High-res thermal</li>
+      </ol>
+      <div class="proj-body two" style="margin-top: 24px;">
+        <button class="zoom" type="button" data-full="assets/pagcraft-architecture.png" aria-label="Open PAG-CRAFT architecture diagram">
+          <img src="assets/pagcraft-architecture.png" alt="PAG-CRAFT architecture: Preprocessing, Cross-Spectral Alignment, Cross-Domain Fusion, Optical &amp; Thermal Encoders, Gated Fusion, Decoder" loading="lazy" />
+          <span class="zoom-hint mono">architecture · click to enlarge</span>
+        </button>
+        <div>
+          <div class="kpis three">
+            <div><b>+2.1<small>dB</small></b><span>PSNR</span></div>
+            <div><b>+0.06</b><span>SSIM</span></div>
+            <div><b>−18%</b><span>recon. error</span></div>
+          </div>
+          <div class="tags" style="margin-top: 18px;"><span>Landsat 8 OLI / TIRS</span><span>PyTorch</span><span>Cross-Attention</span><span>RSTB Transformer</span><span>RCAN</span><span>Gated Fusion</span><span>Wavelet Transform</span><span>wildfire detection</span><span>urban heat</span><span>crop stress</span></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="mini-grid">
+      <article class="mini reveal">
+        <span class="px" data-sprite="rocket" data-size="3"></span>
+        <span class="proj-num mono">P/05</span>
+        <h4>Virtual Try-On</h4>
+        <p>Photorealistic garment try-on with IDM-VTON diffusion. 87% visual similarity, 30% lower latency.</p>
+        <div class="tags"><span>PyTorch</span><span>IDM-VTON</span><span>OpenCV</span></div>
+      </article>
+      <article class="mini reveal">
+        <span class="px" data-sprite="robot" data-size="3"></span>
+        <span class="proj-num mono">P/06</span>
+        <h4>AgroSage</h4>
+        <p>AI + IoT + Blockchain for Agriculture.</p>
+        <div class="tags"><span>AI</span><span>IoT</span><span>Blockchain</span></div>
+      </article>
+      <article class="mini reveal">
+        <span class="px" data-sprite="cat" data-size="3"></span>
+        <span class="proj-num mono">P/07</span>
+        <h4>Carbon Footprint Calculator</h4>
+        <p>Streamlit app for carbon footprint estimation for Indian farmers.</p>
+        <div class="tags"><span>Streamlit</span><span>Python</span></div>
+      </article>
+      <article class="mini reveal">
+        <span class="px" data-sprite="floppy" data-size="3"></span>
+        <span class="proj-num mono">P/08</span>
+        <h4>ReWear</h4>
+        <p>A web platform for clothing exchange and sustainable fashion.</p>
+        <div class="tags"><span>Web</span><span>Sustainability</span></div>
+      </article>
+    </div>
+
+    <!-- TOOLBOX + LAB -->
+    <div class="toolbox">
+      <h3 class="h3 reveal">MY TOOLBOX</h3>
+      <div class="tool-groups">
+        <div class="tg reveal"><h5 class="mono">languages</h5><div class="chips"><span>Python</span><span>C</span><span>C++</span><span>SQL</span><span>Java</span><span>HTML/CSS</span></div></div>
+        <div class="tg reveal"><h5 class="mono">ai / ml</h5><div class="chips"><span>Machine Learning</span><span>Deep Learning</span><span>Generative AI</span><span>Agentic AI</span><span>NLP</span><span>Computer Vision</span></div></div>
+        <div class="tg reveal"><h5 class="mono">frameworks</h5><div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span><span>Transformers</span><span>TorchGeo</span><span>OpenCV</span><span>FastAPI</span><span>Streamlit</span><span>React</span><span>TypeScript</span><span>Tailwind</span><span>MongoDB</span></div></div>
+        <div class="tg reveal"><h5 class="mono">models</h5><div class="chips"><span>ViT</span><span>GANs</span><span>BERT</span><span>GNNs</span><span>YOLOv8</span><span>IDM-VTON</span><span>DINOv3</span></div></div>
+        <div class="tg reveal"><h5 class="mono">data</h5><div class="chips"><span>Pandas</span><span>NumPy</span><span>scikit-learn</span><span>SciPy</span><span>Matplotlib</span><span>Power BI</span></div></div>
+        <div class="tg reveal"><h5 class="mono">tools</h5><div class="chips"><span>Git</span><span>GitHub</span><span>AI Coding Assistants</span><span>APIs</span><span>Automation</span></div></div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-copy reveal">
+        <h3 class="h3">CURRENTLY IN THE LAB</h3>
+        <ul class="lab-list mono">
+          <li>Agentic AI</li><li>Generative AI</li><li>Multimodal AI</li><li>Computer Vision</li><li>Advanced DSA</li><li>AI-assisted development</li><li>Automation</li><li>Production-ready AI systems</li>
+        </ul>
+      </div>
+      <div class="term reveal">
+        <div class="term-bar"><i></i><i></i><i></i><span class="mono">sukriti@ai-lab: ~</span></div>
+        <pre class="term-body mono" id="lab-term"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements" class="section">
+  <div class="wrap">
+    <p class="eyebrow"><span class="px" data-sprite="trophy" data-size="2"></span> achievements</p>
+    <h2 class="h2 reveal">FROM IDEAS TO FINALS</h2>
+
+    <h3 class="group-title mono reveal">hackathons</h3>
+    <div class="ach-grid">
+      <article class="ach ach-hero reveal">
+        <button class="ach-thumb zoom" type="button" data-full="assets/sih-prototype.png" aria-label="Open SIH prototype screenshot"><img src="assets/sih-prototype.png" alt="Our SIH 2025 prototype, a PM Internship Scheme recruiter portal" loading="lazy" /></button>
+        <div class="ach-body">
+          <span class="badge badge-gold">GRAND FINALIST</span>
+          <h4>Smart India Hackathon 2025</h4>
+          <p>Reached the national Grand Finale with a working prototype.</p>
+        </div>
+      </article>
+      <article class="ach reveal">
+        <span class="ach-thumb ach-icon"><span class="px" data-sprite="satellite" data-size="4"></span></span>
+        <div class="ach-body">
+          <span class="badge">TOP 10 FINALIST</span>
+          <h4>ISRO Bharatiya Antariksh Hackathon 2025</h4>
+          <p>Lunar surface elevation modelling with AI × space × computer vision.</p>
+        </div>
+      </article>
+      <article class="ach reveal">
+        <button class="ach-thumb zoom" type="button" data-full="assets/brainwave.webp" aria-label="Open brAInwave 2.0 team photo"><img src="assets/brainwave.webp" alt="Team HerTech on stage at brAInwave 2.0" loading="lazy" /></button>
+        <div class="ach-body">
+          <div class="badge-row"><span class="badge">RUNNER-UP · SCAILE</span><span class="badge badge-gold">WINNER · ALL-GIRLS</span></div>
+          <h4>brAInwave 2.0</h4>
+          <p>Runner-Up in the SCAILE Track and Best All-Girls Team.</p>
+        </div>
+      </article>
+      <article class="ach reveal">
+        <span class="ach-thumb ach-icon"><span class="px" data-sprite="trophy" data-size="4"></span></span>
+        <div class="ach-body">
+          <span class="badge badge-gold">WINNER</span>
+          <h4>ArmorIQ Claw &amp; Shield Hackathon</h4>
+          <p>BITS Pilani APOGEE 2026.</p>
+        </div>
+      </article>
+      <article class="ach reveal">
+        <span class="ach-thumb ach-icon"><span class="px" data-sprite="heart" data-size="5"></span></span>
+        <div class="ach-body">
+          <span class="badge">RUNNER-UP</span>
+          <h4>Kriti Social Impact Challenge 2026</h4>
+          <p>A technology-driven solution for social impact. BITS Pilani TechFest.</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="group-title mono reveal">case competitions · beyond code</h3>
+    <div class="ach-grid three">
+      <article class="ach reveal">
+        <button class="ach-thumb zoom" type="button" data-full="assets/swiggy-case.webp" aria-label="Open Swiggy case competition photo"><img src="assets/swiggy-case.webp" alt="Sukriti with her team at the Swiggy product case competition" loading="lazy" /></button>
+        <div class="ach-body">
+          <span class="badge">2ND RUNNER-UP</span>
+          <h4>Product Case Competition 2.0 × Swiggy</h4>
+          <p>BITS Pilani APOGEE 2025.</p>
+        </div>
+      </article>
+      <article class="ach reveal">
+        <span class="ach-thumb ach-icon"><span class="px" data-sprite="computer" data-size="3"></span></span>
+        <div class="ach-body">
+          <span class="badge">RUNNER-UP</span>
+          <h4>Impact-X</h4>
+          <p>BITS Pilani APOGEE 2025.</p>
+        </div>
+      </article>
+      <article class="ach reveal">
+        <button class="ach-thumb zoom" type="button" data-full="assets/iim-indore.webp" aria-label="Open IIM Indore team photo"><img src="assets/iim-indore.webp" alt="Sukriti with her team in front of IIM Indore" loading="lazy" /></button>
+        <div class="ach-body">
+          <span class="badge">RUNNER-UP</span>
+          <h4>E-Conjecture</h4>
+          <p>Economics &amp; Public Policy case competition, IIM Indore 2024.</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="group-title mono reveal">more recognition</h3>
+    <div class="ach-grid small">
+      <article class="ach reveal"><div class="ach-body"><span class="badge">SELECTED</span><h4>Amazon ML Summer School 2026</h4><p>~3,000 selected from 134,000+ registrations.</p></div></article>
+      <article class="ach reveal"><div class="ach-body"><span class="badge">SELECTED</span><h4>McKinsey.org Forward 2025</h4><p>Professional skills program.</p></div></article>
+      <article class="ach reveal"><div class="ach-body"><span class="badge">3× WINNER</span><h4>Apeejay Talent Search</h4><p>2020 to 2023.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY I BUILD ============ -->
+<section id="why" class="section why">
+  <div class="wrap">
+    <p class="eyebrow"><span class="px" data-sprite="rocket" data-size="2"></span> why i build</p>
+    <div class="statements">
+      <p class="st reveal">Learn by building.</p>
+      <p class="st reveal">Turn ideas into prototypes.</p>
+      <p class="st reveal">Keep going until it <span class="grad">works.</span></p>
+    </div>
+    <p class="why-text reveal">I enjoy the space between an idea and a working product, where you have to learn something new, break things, rebuild them and eventually make them work.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact">
+  <div class="wrap">
+    <span class="px contact-coffee" data-sprite="coffee" data-size="6"></span>
+    <h2 class="h2 reveal">LET'S BUILD SOMETHING.</h2>
+    <p class="contact-text reveal">Have an interesting AI problem, project, internship opportunity or idea worth building?</p>
+    <div class="btn-row center reveal">
+      <a href="#" class="btn btn-ghost" data-link="github" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" class="btn btn-ghost" data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" class="btn btn-primary" data-link="email">Email</a>
+      <a href="#" class="btn btn-ghost" data-link="resume" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>Sukriti Talwar © 2026</span>
+    <span class="mono dim"><span class="px" data-sprite="coffee" data-size="2"></span> Built with curiosity + caffeine.</span>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" type="button" aria-label="Close">×</button>
+  <img alt="" />
+</div>
+
+<div class="toast mono" id="toast" role="status"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
